@@ -21,8 +21,18 @@ docker 1.13.X
 % docker run --interactive --tty --volume "${PWD}:/work" scrapy-handson bash
 ```
 
-## Usage
+## Let's start
 ```bash
+% scrapy startproject my_crawler
+
+% cd my_crawler && scrapy genspider example example.com
+
+% vim my_crawler/spiders/example.py
+
+% scrapy runspider example.py
+
+% vim my_crawler/items.py
+
 % scrapy crawl example
 
 % scrapy crawl example -o output.json
@@ -36,9 +46,35 @@ docker 1.13.X
 # Login to scrapinghub.com
 % shub login
 
-# Generate eggs including libraries
+# Create project on your browser (and copy PROJECT_ID)
+% open https://app.scrapinghub.com/
+
+# Deploy to scrapinghub.com to generate `scrapinghub.yaml`
+% shub deploy
+
+# Generate eggs to generate `setup.py` and `requirements.txt`
 % shub migrate-eggs
 
-# Deploy to scrapinghub.com
+# Add dependencies
+% cat ../requirements.txt >> requirements.txt
+
+# Re-Deploy to scrapinghub.com including dependencies
 % shub deploy
+```
+
+## Cleanup
+```bash
+% docker ps
+
+% docker stop $CONTAINER_ID
+
+% docker rm $CONTAINER_ID
+
+% docker ps -a | grep $CONTAINER_ID
+
+% docker rmi scrapy-handson
+
+% docker images | grep scrapy-handson
+
+# Many thanks!!
 ```
