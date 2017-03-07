@@ -6,7 +6,7 @@
 docker 1.13.X
 ```
 
-## Install && Debug
+## Install && Run
 ```bash
 # Pull image
 % docker pull asia.gcr.io/cyberagent-105/chck/scrapy-handson
