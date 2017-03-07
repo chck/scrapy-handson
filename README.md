@@ -8,10 +8,14 @@ docker 1.13.X
 
 ## Install && Debug
 ```bash
-% docker build . --tag scrapy-handson
+# Pull image
+% docker pull asia.gcr.io/cyberagent-105/chck/scrapy-handson
 
-# or 
-% docker pull asia.gcr.io/cyberagent-105/scrapy-handson
+# Set tag alias
+% docker tag asia.gcr.io/cyberagent-105/chck/scrapy-handson scrapy-handson
+
+# Check it out!!
+% docker images
 
 # Run container
 % docker run --interactive --tty --volume "${PWD}:/work" scrapy-handson bash
