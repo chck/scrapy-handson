@@ -3,7 +3,7 @@
 
 ## Requirements
 ```bash
-docker 1.13.X
+docker 17.03.X
 ```
 
 ## Install && Run
