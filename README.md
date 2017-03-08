@@ -18,7 +18,7 @@ docker 17.03.X
 % docker images
 
 # Run container
-% docker run --interactive --tty --volume "${PWD}:/work" scrapy-handson
+% docker run --interactive --tty --detach --volume "${PWD}:/work" scrapy-handson
 
 # Check it out!!
 % docker ps
