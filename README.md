@@ -18,7 +18,13 @@ docker 17.03.X
 % docker images
 
 # Run container
-% docker run --interactive --tty --volume "${PWD}:/work" scrapy-handson bash
+% docker run --interactive --tty --volume "${PWD}:/work" scrapy-handson
+
+# Check it out!!
+% docker ps
+
+# Enter the container
+% docker exec --interactive --tty $CONTAINER_ID bash
 ```
 
 ## Let's start
