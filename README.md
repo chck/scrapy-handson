@@ -8,11 +8,8 @@ docker 17.03.X
 
 ## Install && Run
 ```bash
-# Pull image
-% docker pull asia.gcr.io/cyberagent-105/chck/scrapy-handson
-
-# Set tag alias
-% docker tag asia.gcr.io/cyberagent-105/chck/scrapy-handson scrapy-handson
+# Build image
+% docker build . -t scrapy-handson
 
 # Check it out!!
 % docker images
